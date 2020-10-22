@@ -44,7 +44,8 @@
                     <a class="btn btn-outline-white" href="/app/signout" th:href="@{/signout}">Sign out</a>
                 </th:block>
                 <th:block sec:authorize="!isAuthenticated()">
-                    <a class="btn btn-outline-white" href="/app/signup" th:href="@{/signup}">Sign up</a>
+                    <a class="btn btn-outline-white" href="/app/signin" th:href="@{/signin}">ログイン</a>
+                    <a class="btn btn-outline-white" href="/app/signup" th:href="@{/signup}">ユーザ登録</a>
                 </th:block>
             </li>
             <li class="nav-item avatar" th:if="${#authorization.expression('isAuthenticated()') && #authentication.principal.user.avatarImageBase64Encode.length() > 0}">

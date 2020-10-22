@@ -1,8 +1,7 @@
+// ユーザーのエンティティファイル
 package com.example.demo.model;
 
-import com.example.demo.auth.UserRolesUtil;
-import lombok.Data;
-import lombok.ToString;
+import java.time.LocalDateTime;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -14,7 +13,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
+
+import com.example.demo.auth.UserRolesUtil;
+
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Table(name = "user")
